@@ -1,10 +1,10 @@
 // Simple Objects
-const CourseOffering = require('./course-offering.js')
-const Course = require('./course.js')
-const Institution = require('./institution.js')
-const Instructor = require('./instructor.js')
-const Person = require('./person.js')
-const Student = require('./student.js')
+const CourseOffering = require('./src/course-offering.js')
+const Course = require('./src/course.js')
+const Institution = require('./src/institution.js')
+const Instructor = require('./src/instructor.js')
+const Person = require('./src/person.js')
+const Student = require('./src/student.js')
 
 // Create an institution (of learning)
 // Institution

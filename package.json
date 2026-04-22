@@ -1,0 +1,21 @@
+{
+  "name": "course-registration-system-2025",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "course-offering.js",
+  "scripts": {
+    "dev": "node runner.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0",
+    "jest": "^30.3.0"
+  }
+}
