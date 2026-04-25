@@ -10,9 +10,13 @@ class Student extends Person {
   list_courses () {
     const ordered = Object.keys(this.transcript)
       .sort((a, b) => {
-        const yearComparison = b.year - a.year
+        const yearQuarterA = a.slice(a.lastIndexOf("(") + 1, a.lastIndexOf(")"))
+        const yearQuarterB = b.slice(b.lastIndexOf("(") + 1, b.lastIndexOf(")"))
+        const [qA, yA] = yearQuarterA.split(" ")
+        const [qB, yB] = yearQuarterB.split(" ")
+        const yearComparison = yB - yA
         if (yearComparison !== 0) return yearComparison
-        return b.quarter - a.quarter
+        return qB > qA
       })
     return ordered
   }
@@ -46,7 +50,7 @@ class Student extends Person {
     }
 
     for (const x of this.courseList) {
-      if (this.username in x.grades) { // check to see if a grade has already been submitted
+      if (this.userName in x.grades) { // check to see if a grade has already been submitted
         earned += (gradeScale[x.get_grade(this)] * x.course.credits)
         available += x.course.credits
       }
